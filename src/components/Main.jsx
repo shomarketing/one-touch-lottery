@@ -37,6 +37,7 @@ const Main = ({ users, toggleModal, setWinnerInfo }) => {
         outerBorderWidth={2}
         outerBorderColor="#4b4b4b"
         radiusLineWidth={2}
+        fontWeight={300}
       />
       <button disabled={mustSpin} className="button" onClick={handleSpinClick}>
         Старт
