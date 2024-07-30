@@ -24,21 +24,23 @@ const Main = ({ users, toggleModal, setWinnerInfo }) => {
   return (
     <div className="main">
       <img src={img} alt="" />
-      <Wheel
-        data={data}
-        mustStartSpinning={mustSpin}
-        backgroundColors={["#062760", "#d9d9d9"]}
-        textColors={["#ffffff", "#000000"]}
-        prizeNumber={prizeNumber}
-        onStopSpinning={() => {
-          setMustSpin(false);
-          toggleModal(true);
-        }}
-        outerBorderWidth={2}
-        outerBorderColor="#4b4b4b"
-        radiusLineWidth={2}
-        fontWeight={300}
-      />
+      {data.length > 0 ? (
+        <Wheel
+          data={data}
+          mustStartSpinning={mustSpin}
+          backgroundColors={["#062760", "#d9d9d9"]}
+          textColors={["#ffffff", "#000000"]}
+          prizeNumber={prizeNumber}
+          onStopSpinning={() => {
+            setMustSpin(false);
+            toggleModal(true);
+          }}
+          outerBorderWidth={2}
+          outerBorderColor="#4b4b4b"
+          radiusLineWidth={2}
+          fontWeight={300}
+        />
+      ) : <h2 style={{textAlign: "center"}}>Немає зареєстрованих учасників</h2>}
       <button disabled={mustSpin} className="button" onClick={handleSpinClick}>
         Старт
       </button>
