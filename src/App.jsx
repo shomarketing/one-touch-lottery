@@ -16,7 +16,7 @@ const App = () => {
     (async function () {
       try {
         const data = await axios.get(
-          "https://d0q47hgp-5005.euw.devtunnels.ms/getUsers"
+          "https://api.fair.onetouch.com.ua/getUsers"
         );
         setUsers(data.data);
         console.log(data.data);

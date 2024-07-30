@@ -21,7 +21,7 @@ const Modal = ({ isToggled, setIsToggled, winnerInfo, users, setUsers }) => {
         winnerPlace = 1;
       }
       const data = await axios.post(
-        "https://d0q47hgp-5005.euw.devtunnels.ms/addWinner",
+        "https://api.fair.onetouch.com.ua/addWinner",
         { id: winnerInfo.id, place: winnerPlace }
       );
       setUsers(data.data);
@@ -35,7 +35,7 @@ const Modal = ({ isToggled, setIsToggled, winnerInfo, users, setUsers }) => {
   const handleDecline = async () => {
     try {
       const res = await axios.get(
-        `https://d0q47hgp-5005.euw.devtunnels.ms/hideUser/${winnerInfo.id}`
+        `https://api.fair.onetouch.com.ua/hideUser/${winnerInfo.id}`
       );
       setUsers(res.data);
     } catch (e) {
