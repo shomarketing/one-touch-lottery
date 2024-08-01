@@ -17,8 +17,8 @@ const Prizes = ({ users }) => {
             users.winner.length === 0 && "prizeInfoActive"
           }`}
         >
-          <img src={power} alt="" />
-          <p className="prizeTitle">Павербанк на 10000 mАh</p>
+          <img src={power} style={{width: "60px"}} alt="" />
+          <p className="prizeTitle">Колонки Genius</p>
         </div>
       </div>
       <div className="prize">
