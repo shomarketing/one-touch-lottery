@@ -1,6 +1,7 @@
-import hdd from "../assets/hdd.webp";
-import power from "../assets/power.webp";
-import jbl from "../assets/jbl.webp";
+// import hdd from "../assets/hdd.webp";
+// import power from "../assets/power.webp";
+import panel from "../assets/panel.webp";
+// import jbl from "../assets/jbl.webp";
 import "../App.css";
 
 const Prizes = ({ users }) => {
@@ -17,11 +18,11 @@ const Prizes = ({ users }) => {
             users.winner.length === 0 && "prizeInfoActive"
           }`}
         >
-          <img src={power} style={{width: "60px"}} alt="" />
-          <p className="prizeTitle">Колонки Genius</p>
+          <img src={panel} style={{ width: "200px", height: "200px" }} alt="" />
+          <p className="prizeTitle">Longi solar 585 watt</p>
         </div>
       </div>
-      <div className="prize">
+      {/* <div className="prize">
         <p className="winner">
           {users.winner[1]
             ? `${users.winner[1].name} №${users.winner[1].id}`
@@ -50,7 +51,7 @@ const Prizes = ({ users }) => {
           <img src={jbl} alt="" />
           <p className="prizeTitle">Колонка JBL GO3</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

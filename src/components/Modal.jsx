@@ -2,8 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import Loader from "./Loader";
 import dog from "../assets/dog.gif";
-import cat from "../assets/cat.gif";
-import babka from "../assets/babka.gif";
+// import cat from "../assets/cat.gif";
+// import babka from "../assets/babka.gif";
 import "../App.css";
 
 const Modal = ({ isToggled, setIsToggled, winnerInfo, users, setUsers }) => {
@@ -48,17 +48,7 @@ const Modal = ({ isToggled, setIsToggled, winnerInfo, users, setUsers }) => {
     <div className={`modalWrapper ${isToggled && "visibleModal"}`}>
       <div className="modalContent">
         <div className="modalInfo">
-          <img
-            className="gif"
-            src={
-              users.winner.length === 0
-                ? dog
-                : users.winner.length === 1
-                ? cat
-                : babka
-            }
-            alt=""
-          />
+          <img className="gif" src={dog} alt="" />
           {loading ? (
             <Loader />
           ) : (
